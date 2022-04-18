@@ -28,8 +28,8 @@ body {
 
 .main-logo {
   width: 80%;
-  -webkit-transition: all 350ms ease;
-  transition: all 350ms ease;
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
 }
 
 .main-logo:hover {
