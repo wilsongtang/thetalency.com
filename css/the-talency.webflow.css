@@ -1,67 +1,266 @@
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.w-layout-grid {
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+@media screen and (max-width: 991px) {
+  .w-layout-blockcontainer {
+    max-width: 728px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .w-layout-blockcontainer {
+    max-width: none;
+  }
+}
+
 body {
-  font-family: Raleway, sans-serif;
   color: #000;
+  font-family: Raleway, sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
 
 .home-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
+  max-width: 960px;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
+  display: flex;
 }
 
 .main-logo {
-  width: 80%;
-  -webkit-transition: all 1000ms ease;
-  transition: all 1000ms ease;
+  width: 50%;
+  margin-bottom: 32px;
+  transition: all 1s;
+  position: static;
+  top: 25vh;
 }
 
 .main-logo:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
 .contact-button {
-  position: absolute;
-  bottom: 25%;
-  padding: 12px;
-  border: 2px solid #ccc;
-  background-color: #ccc;
-  opacity: 1;
-  -webkit-transition: all 350ms ease;
-  transition: all 350ms ease;
+  opacity: .75;
   color: #fff;
-  font-size: 16px;
   text-align: center;
   letter-spacing: 8px;
-  text-decoration: none;
   text-indent: 4px;
   text-transform: uppercase;
+  background-color: #000;
+  border: 2px solid #000;
+  padding: 12px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all .35s;
+  position: static;
+  bottom: 40%;
 }
 
 .contact-button:hover {
-  border-color: #000;
+  opacity: 1;
   background-color: #000;
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
+  border-color: #000;
   transform: scale(1.1);
+}
+
+.logo-grid {
+  width: 100%;
+  max-width: 1120px;
+  grid-column-gap: 48px;
+  grid-row-gap: 48px;
+  grid-template-rows: minmax(auto, 32px) minmax(auto, 32px);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(auto, 32px);
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 48px;
+  position: static;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.client-logo {
+  max-height: 48px;
+  opacity: .75;
+  object-fit: contain;
+  transition: all 1s;
+}
+
+.client-logo:hover {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.client-logo-container {
+  max-width: 100%;
+  background-color: #000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0%;
+  right: 0%;
+}
+
+.the-talency-logo-container {
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: -25%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.contact-container {
+  position: absolute;
+  top: 55vh;
+}
+
+.button-link-text {
+  text-decoration: none;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.heading.dark {
+  color: #000;
+}
+
+.main-logo-section {
+  height: 90vh;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.client-section {
+  height: 90vh;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.paragraph {
+  max-width: 640px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.grid {
+  grid-column-gap: 72px;
+  grid-row-gap: 72px;
+  grid-template-rows: minmax(auto, 36px) minmax(auto, 36px);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(auto, 36px);
+  grid-auto-flow: row;
+  align-items: center;
+  justify-items: center;
+}
+
+.section {
+  height: 5vh;
+  background-image: linear-gradient(#fff, #000);
+}
+
+.container {
+  max-width: 80%;
+}
+
+.paragraph-2 {
+  color: #bbb;
+  margin-bottom: 82px;
+}
+
+.about-us-section {
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.footer-container {
+  color: #ccc;
+  font-size: 14px;
+  position: relative;
+  top: 30vh;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .logo-grid {
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+  }
+
+  .client-logo-container {
+    padding: 0;
+  }
+
+  .the-talency-logo-container {
+    padding: 48px;
+  }
+
+  .grid {
+    grid-column-gap: 36px;
+    grid-row-gap: 64px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main-logo {
+    width: 75%;
+  }
+
+  .client-section {
+    height: 100%;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -70,10 +269,33 @@ body {
   }
 
   .contact-button {
-    padding: 6px;
-    font-size: 12px;
     letter-spacing: 6px;
     text-indent: 3px;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .heading {
+    margin-bottom: 60px;
+  }
+
+  .grid {
+    grid-column-gap: 24px;
+    grid-row-gap: 48px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-container {
+    top: 25vh;
+  }
+
+  .footer {
+    padding: 52px;
   }
 }
+
+#w-node-_16f6ed52-0ea6-dc08-0bac-5db36bd21ee7-ee35ce34, #w-node-_97ce95f6-cbef-d719-c91a-a38f8b426e0d-ee35ce34, #w-node-_712b1e29-e5af-bd2d-0b3d-7c575b87626c-ee35ce34, #w-node-_7695c3d9-b150-23a3-347f-b63b3c283ab7-ee35ce34, #w-node-e7fa9659-3ca6-4c7d-08dc-21f480eacc30-ee35ce34, #w-node-_18169401-e86b-f5bf-67b8-59a21be60020-ee35ce34, #w-node-_08985371-1de5-2cd4-a6b1-7e3445648560-ee35ce34, #w-node-a59755c5-1949-e69d-1051-0cd482c0436a-ee35ce34, #w-node-d1b45d5d-0969-720a-6138-be9802a7f7a1-ee35ce34, #w-node-_2cceb7af-fab5-b893-fcfc-1d79e93a103d-ee35ce34, #w-node-_714d5ab5-4919-b3fa-ddc6-11cc6460e094-ee35ce34, #w-node-f054f973-6ccb-a0cc-e0eb-b68fe7e8753b-ee35ce34, #w-node-bc3ec34f-cca6-46d0-c6ee-9644d068177e-ee35ce34, #w-node-_2d0e5f67-989c-b39e-8475-b2c8ec122511-ee35ce34, #w-node-bbeabcaf-64f7-39be-6644-4b9fcd2a4603-ee35ce34, #w-node-_5ba5d760-8260-ef22-6208-5059a012d64c-ee35ce34, #w-node-_2c538930-93f9-034e-5d23-b0750827586c-ee35ce34, #w-node-_498836e3-49e1-618a-3234-6ff200567804-ee35ce34, #w-node-_509b09d4-5c50-f774-a2d2-b9fc66795c1e-ee35ce34, #w-node-bd8ef320-c4ff-d1e0-d3b1-b576276888f5-ee35ce34, #w-node-_115d3851-dac4-d4e2-dc0c-942f31dac6f9-ee35ce34, #w-node-_28351e4c-22f9-c284-fe28-e5ca8e04a1fa-ee35ce34, #w-node-_76b03c54-81a3-97b9-f763-55b9012cd4f4-ee35ce34, #w-node-_1bf2bca0-0199-4f19-320c-86928594c875-ee35ce34, #w-node-_6f0a1c33-54ce-5eed-242d-f7480cd4b4a7-ee35ce34, #w-node-be2477e4-ef87-6d68-b5c9-9a2320eef28c-ee35ce34, #w-node-_68cce2d3-7b57-7e9d-c4d0-a2ec839bb726-ee35ce34, #w-node-_186a3ef4-a893-d442-408a-b4643ab9a9fb-ee35ce34, #w-node-d748561d-dea4-fbe4-f602-fba42a3ae41f-ee35ce34, #w-node-_7ae018ce-e870-a055-ccff-c9bccdcdc28e-ee35ce34, #w-node-_7dd3ba0f-e03f-47fe-95b6-1a917b66ac45-ee35ce34, #w-node-acf855e5-4d14-c2e4-55ef-83dc6deb46dd-ee35ce34, #w-node-_341634df-d51c-64b4-b572-831d67ba3b8f-ee35ce34, #w-node-_727a5e4c-a2c3-939d-5f08-829b9768b079-ee35ce34, #w-node-_6daf5a47-de6c-7e8b-98d0-bfd0564a9b47-ee35ce34, #w-node-_1e70f562-1da8-edee-d4ab-8e9a0cebd19f-ee35ce34, #w-node-e8a7a873-e947-0c1c-5e3a-faa18d35bb69-ee35ce34 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
 
